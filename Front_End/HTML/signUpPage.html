@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/Front_End/img/LogoPortalApenasRedondoFundoBranco.png" type="image/x-icon">
+  <link rel="stylesheet" href="../CSS/signUpPage.css" />
+  <script src="../JS/CadastroServices/cadastroPessoais/formatacaoCpfNumero.js"></script>
+  <script src="../JS/CadastroServices/cadastroPessoais/cadastroPessoais.js"></script>
+  <title>Sign Up</title>
+</head>
+
+<body>
+  <div class="form-container">
+    <div class="form_autenticacao">
+      <form id="cadastroForm">
+       <img src="../img/logoLogin.png" alt="">
+
+        <h2>Dados Pessoais:</h2>
+
+        <div class="erroCadastrar" style="display: none;" required>
+          <p>Erro ao cadastrar as informações pessoais!</p>
+        </div>
+
+        <div class="caixa_input" required>
+          <input type="text" name="nome" id="nome"  placeholder="Nome Completo" maxlength="100" />
+        </div>
+
+        <div class="caixa_input" required>
+          <input type="text" name="cpf" id="cpf"  placeholder="CPF: (somente números)" maxlength="11"
+            pattern="\d{11}" />
+        </div>
+
+        <div class="caixa_input" required>
+          <input type="text" name="telefone" id="telefone"  placeholder="Telefone: (somente números)"
+            maxlength="11" pattern="\d{10,11}" />
+        </div>
+
+        <div class="caixa_input" required>
+          <input type="email" name="email" id="email"  placeholder="Email: exemplo@email.com" maxlength="100" />
+        </div>
+
+        <div class="radio_sexo" required>
+          <label for="sexo">Sexo: </label>
+          <input type="radio" name="sexo" id="sexo_m" value="M" > Masculino
+          <input type="radio" name="sexo" id="sexo_f" value="F"> Feminino
+        </div>
+
+        <div class="dt_nascimento" required>
+          <label for="dt_nascimento">Data de Nascimento:</label>
+          <input type="date" name="dt_nascimento" id="dt_nascimento" min="1900-01-01" max="2100-12-31">
+        </div>
+
+        <div class="input_doc" required>
+          <h3>Foto do documento:</h3>
+          <br>
+          <input type="file" id="arquivo" />
+        </div>
+
+        <div class="senhaInput">
+          <input type="password" name="senha" id="senha"  placeholder="Senha" maxlength="30" >
+        </div>
+
+        <div class="senhaInput">
+          <input type="password" name="confirmar_senha" id="confirmar_senha"  placeholder="Confirmar Senha"
+            maxlength="30" >
+        </div>
+
+        <div class="erroCPF">
+          <p>Este CPF já está em uso!</p>
+        </div>
+
+        <div class="erroEMAIL">
+          <p>Este email já está em uso!</p>
+        </div>
+
+        <div class="erroSENHA">
+          <p>As senhas devem ser iguais!</p>
+        </div>
+
+        <div class="erroIdade">
+          <p>Idade minima para cadastro de 18 anos!</p>
+        </div>
+        
+        <div class="erroDocumento">
+          <p>O documento pessoal deve ser adicionado!</p>
+        </div>
+        <div class="senhaVazia">
+          <p>Insira uma senha!</p>
+        </div>
+        <div class="campoNull">
+          <p>Preencha todos os campos!</p>
+        </div>
+        <div class="BigArquivo">
+          <p>O arquivo excede o tamanho limite!</p>
+        </div>
+        
+        <button type="submit">Registrar</button>
+        <button onclick="location.href='../HTML/loginPage.html'">Retornar ao Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>

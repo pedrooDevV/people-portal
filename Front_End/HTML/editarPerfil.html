@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Front_End/CSS/editarPerfil.css">
+  <link rel="stylesheet" href="/Front_End/CSS/global.css">
+  <link rel="shortcut icon" href="/Front_End/img/LogoPortalApenasRedondoFundoBranco.png" type="image/x-icon">
+  <script src="/Front_End/JS/EditarPerfil/EditarPerfil.js"></script>
+  <title>Editar Perfil - Portal do Paciente</title>
+</head>
+
+<body>
+  <header class="navbar">
+    <nav>
+      <a href="/Front_End/HTML/index.html">Portal Do Paciente</a>
+    </nav>
+    <div class="right_links">
+      <a href="/Front_End/HTML/loginPage.html" id="logout_button">Sair</a>
+    </div>
+  </header>
+
+  <div class="page_navigator">
+    <a href="../HTML/index.html">Portal do Paciente</a>
+    <p>/</p>
+    <p>Editar Perfil</p>
+  </div>
+
+  <div class="logo-title">
+    <img src="/Front_End/img/logoSemEscrita.png" alt="Logo">
+    <h2 class="title">Editar Perfil</h2>
+  </div>
+
+  <div class="texto">
+    <p>Edite aqui o seu perfil</p>
+  </div>
+
+  <div class="container">
+    <div class="card" id="formulario1">
+      <form id="editProfileForm">
+        <input type="text" placeholder="Nome Completo" id="nomeCompleto" maxlength="100"><br>
+        <input type="tel" placeholder="Telefone: (99) 12345-6789" id="telefone" maxlength="11"><br>
+        <input type="email" placeholder="Email: exemplo@email.com" id="email" maxlength="100"><br>
+        <input type="text" id="dt_nascimento" value="Data de nascimento: 19/01/2000" disabled><br>
+        <h3>Endereço</h3>
+        <input type="text" placeholder="CEP" id="cep" maxlength="9"><br>
+        <input type="text" placeholder="Rua" id="rua" maxlength="100"><br>
+        <input type="text" placeholder="Número" id="numero" maxlength="10"><br>
+        <input type="text" placeholder="Complemento" id="complemento" maxlength="50"><br>
+        <input type="text" placeholder="Bairro" id="bairro" maxlength="50"><br>
+        <input type="text" placeholder="Cidade" id="cidade" maxlength="50"><br>
+        <input type="text" placeholder="Estado" id="estado" maxlength="2"><br>
+       <button type="button" id="salvar-butao">Salvar Alterações</button>
+
+        <div class="sucessoAlteracao">
+          <h3>Alterações salvas com sucesso!</h3>
+        </div>
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Perfil atualizado com sucesso!</p>
+             <button onclick="closeModal()" class="ok-button">OK</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="card" id="formulario2">
+      <div class="form-container">
+        <div class="form_alergias">
+
+          <form id="alergiaCadastro">
+
+            <div class="alergias">
+              <h2>Deseja alterar as alergias?</h2>
+
+              <div class="erroCadastrarAlergia">
+                <p>Erro ao cadastrar alergia!</p>
+              </div>
+
+              <div id="alergiasSelecionadas"></div>
+            </div>
+          </form>
+        </div>
+        
+        <a href="../HTML/cadastroAlergias.html" class="mudarAlergia"><h1>Alterar</h1></a>
+
+        <script src="/Front_End/JS/CadastroServices/cadastroAlergia/cadastroAlergias.js"></script>
+      </div>
+      <div class="sucessoAlteracao2">
+        <h3>Alterações salvas com sucesso!</h3>
+      </div>
+      </form>
+
+    </div>
+
+  </div>
+  </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; 2025 Portal do Paciente. Todos os direitos reservados.</p>
+    <a href="/Front_End/HTML/sobreNos.html">Sobre nós</a>
+  </footer>
+</body>
+
+</html>

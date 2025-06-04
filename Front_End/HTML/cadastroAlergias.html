@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/Front_End/img/LogoPortalApenasRedondoFundoBranco.png" type="image/x-icon">
+  <link rel="stylesheet" href="../CSS/cadastroAlergias.css" />
+  <script src="/Front_End/JS/CadastroServices/cadastroAlergia/cadastroAlergias.js"></script>
+  <script src="/Front_End/JS/CadastroServices/cadastroAlergia/alergiaCadastro.js"></script>
+
+  <title>Cadastro Alergias - Portal do Paciente</title>
+
+</head>
+
+<body>
+  <div class="form-container">
+    <div class="form_alergias">
+
+      <form id="alergiaCadastro">
+
+        <img src="../img/logoLogin.png" alt="">
+        <div class="alergias">
+          <h2>Selecione suas alergias:</h2>
+
+          <div class="erroCadastrarAlergia">
+            <p>Erro ao cadastrar alergia!</p>
+          </div>
+
+          <div id="alergiasSelecionadas"></div>
+        </div>
+    </div>
+    <br>
+    <select id="alergiaSelect">
+      <option value="" disabled selected>Escolha uma alergia</option>
+      <option value="ALERGIA_ALIMENTAR">Alimentar</option>
+      <option value="ALERGIA_MEDICAMENTOSA">Medicamentos</option>
+      <option value="ALERGIA_RESPIRATORIA">Respiratória</option>
+      <option value="ALERGIA_DERMATOLOGICA">Dermatológica</option>
+      <option value="ALERGIA_OCULAR">Ocular</option>
+      <option value="ALERGIA_CONTACTANTE">Contactante</option>
+      <option value="ALERGIA_LATEX">Látex</option>
+      <option value="ALERGIA_MOFO">Mofo</option>
+      <option value="ALERGIA_POEIRA">Poeira</option>
+      <option value="ALERGIA_POLEN">Pólen</option>
+      <option value="ALERGIA_ANIMAIS">Animais</option>
+      <option value="ALERGIA_FRUTOS_DO_MAR">Frutos do mar</option>
+      <option value="ALERGIA_LACTOSE">Lactose</option>
+      <option value="ALERGIA_GLUTEN">Glúten</option>
+      <option value="ALERGIA_OVO">Ovo</option>
+      <option value="ALERGIA_AMENDOIM">Amendoim</option>
+      <option value="ALERGIA_SOJA">Soja</option>
+      <option value="ALERGIA_TRIGO">Trigo</option>
+      <option value="ALERGIA_NOZES">Nozes</option>
+      <option value="ALERGIA_CASTANHAS">Castanhas</option>
+      <option value="ALERGIA_FRUTAS_CITRICAS">Frutas cítricas</option>
+      <option value="ALERGIA_PICADA_INSETOS">Picada de insetos</option>
+      <option value="ALERGIA_ABELHA">Abelha</option>
+      <option value="ALERGIA_VESPAS">Vespas</option>
+      <option value="ALERGIA_PERFUMES">Perfumes</option>
+      <option value="ALERGIA_COSMETICOS">Cosméticos</option>
+      <option value="ALERGIA_DETERGENTES">Detergentes</option>
+      <option value="ALERGIA_BEBIDAS_ALCOOLICAS">Bebidas alcoólicas</option>
+      <option value="ALERGIA_CAFEINA">Cafeína</option>
+      <option value="ALERGIA_CONSERVANTES">Conservantes</option>
+      <option value="ALERGIA_CORANTES">Corantes</option>
+      <option value="ALERGIA_ADITIVOS_ALIMENTARES">Aditivos alimentares</option>
+      <option value="ALERGIA_SULFITOS">Sulfitos</option>
+      <option value="ALERGIA_NIQUEL">Níquel</option>
+      <option value="ALERGIA_COBALTO">Cobalto</option>
+      <option value="ALERGIA_FORMALDEIDO">Formaldeído</option>
+      <option value="ALERGIA_FUNGOS">Fungos</option>
+      <option value="ALERGIA_PELOS">Pelos</option>
+      <option value="ALERGIA_ACAROS">Ácaros</option>
+      <option value="ALERGIA_FARMACOS_ANTIINFLAMATORIOS">Antiinflamatórios</option>
+      <option value="ALERGIA_ANTIBIOTICOS">Antibióticos</option>
+      <option value="ALERGIA_ANALGESICOS">Analgésicos</option>
+      <option value="ALERGIA_PENICILINA">Penicilina</option>
+      <option value="ALERGIA_AAS_ACIDO_ACETILSALICILICO">AAS (Ácido Acetilsalicílico)</option>
+      <option value="ALERGIA_INSULINA">Insulina</option>
+      <option value="ALERGIA_ANTICONVULSIVANTES">Anticonvulsivantes</option>
+      <option value="ALERGIA_ANESTESICOS">Anestésicos</option>
+      <option value="ALERGIA_IEDES_INIBIDORES_ENZIMA_CONVERSORA">Inibidores da enzima conversora</option>
+      <option value="ALERGIA_VACINAS">Vacinas</option>
+      <option value="ALERGIA_PRODUTOS_LIMPADORES">Produtos de limpeza</option>
+      <option value="ALERGIA_TINTAS">Tintas</option>
+      <option value="ALERGIA_METAL">Metal</option>
+      <option value="ALERGIA_FIBRAS_SINTETICAS">Fibras sintéticas</option>
+      <option value="ALERGIA_POEIRA_DOMESTICA">Poeira doméstica</option>
+      <option value="ALERGIA_PLANTAS">Plantas</option>
+      <option value="ALERGIA_CEREAIS">Cereais</option>
+      <option value="ALERGIA_AZEITES">Azeites</option>
+      <option value="ALERGIA_LUSTRADORES">Lustradores</option>
+      <option value="ALERGIA_PRODUTOS_CAPILARES">Produtos capilares</option>
+    </select>
+
+
+    <button type="submit" onclick="adicionarAlergia()" id="btnCadastrarAlergia">Adicionar</button>
+    <button type="button" onclick="window.location.href='index.html'">Confirmar</button>
+
+  </div>
+  </form>
+  </div>
+  </div>
+
+</body>
+
+</html>

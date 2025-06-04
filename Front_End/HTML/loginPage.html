@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/Front_End/img/LogoPortalApenasRedondoFundoBranco.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/loginPage.css">
+    <script src="../JS/LoginServices/login.js"></script>
+    <script src="../JS/Index/LimparCPF.js"></script>
+    <title>SignIn</title>
+
+</head>
+
+<body>
+
+    <div class="form-container">
+        <img src="../img/logoLogin.png">
+        <form id="formLogin">
+            <input type="text" name="cpf" id="cpf" placeholder="CPF:" maxlength="11" pattern="\d{11}"
+                inputmode="numeric" oninput="this.value = this.value.replace(/\D/g, '')" />
+            <input type="password" id="senha" placeholder="Senha">
+
+            <div class="erroLogin">
+                <p>Erro na autenticação!</p>
+            </div>
+
+            <div class="btn-container">
+                <button type="submit">Entrar</button>
+                <button onclick="location.href='../HTML/signUpPage.html'">Cadastrar-se</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
